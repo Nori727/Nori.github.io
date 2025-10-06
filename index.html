@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norkin • Projekty & Społeczność</title>
+
+  <!-- SEO / social -->
+  <meta name="description" content="Oficjalny hub projektów Norkin: boty Discord, aplikacje, społeczność OVSL." />
+
+  <!-- ==== FAVICONY & PWA ==== -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#111317" />
+
+  <!-- Tailwind (CDN) + własna paleta -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#111317',
+            panel: '#1c1e23',
+            border: '#3d4046',
+            accent: '#6d7179',
+            primary: '#e6e6e6',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-bg text-primary scroll-smooth">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="img/norkin.jpg" alt="Avatar Norkin" class="w-8 h-8 rounded-full" loading="lazy" />
+        <span class="font-bold text-lg">Norkin</span>
+      </a>
+      <nav class="hidden sm:block text-sm space-x-6">
+        <a href="#bots"    class="hover:text-accent">Boty</a>
+        <a href="#servers" class="hover:text-accent">Serwery</a>
+        <a href="#about"   class="hover:text-accent">O&nbsp;mnie</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="relative pt-28 pb-24 text-center px-4 overflow-hidden">
+    <div class="absolute inset-0 flex justify-center opacity-5 pointer-events-none">
+      <div class="w-[600px] h-[600px] rounded-full border-8 border-border"></div>
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">
+      Ekosystem <span class="text-accent">Norkin</span> dla Twojego Discorda
+    </h1>
+    <p class="max-w-2xl mx-auto text-accent mb-10">
+      Boty, downloader oraz narzędzia, które automatyzują i uprzyjemniają codzienność.
+    </p>
+    <a href="#bots" class="inline-block bg-primary text-bg font-semibold py-3 px-8 rounded hover:bg-white/90 transition">
+      Poznaj możliwości
+    </a>
+  </section>
+
+  <!-- ===== WHAT ===== -->
+  <section class="max-w-5xl mx-auto px-4 py-20">
+    <h2 class="text-3xl font-bold mb-8">Co potrafi Norkin?</h2>
+    <ul class="grid sm:grid-cols-2 gap-6 text-lg leading-7 text-accent list-disc list-inside">
+      <li>Tickety</li>
+      <li>Automoderacja i system poziomów</li>
+      <li>System "giveaway"</li>
+      <li>Rozmowa z AI</li>
+    </ul>
+  </section>
+
+  <!-- ===== BOTS ===== -->
+  <section id="bots" class="bg-panel py-20 border-t border-border">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-10">Moje boty / aplikacje</h2>
+
+      <div class="grid sm:grid-cols-2 gap-8">
+
+        <!-- Norkin Bot -->
+        <div class="border border-border rounded-lg p-6 bg-bg/60">
+          <div class="flex items-center mb-4">
+            <img src="img/norkin.jpg" alt="Ikona Norkin Bot" class="w-12 h-12 rounded-full mr-3" loading="lazy" />
+            <h3 class="text-xl font-semibold">Norkin&nbsp;Bot</h3>
+          </div>
+          <p class="text-accent text-sm mb-5">
+            Uniwersalny asystent: levele, AI-chat, powiadomienia, konfiguracja na poziomie serwera.
+          </p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1349082962398023762&permissions=8&integration_type=0&scope=bot+applications.commands"
+             target="_blank" rel="noopener" class="btn-invite">
+            Zaproś
+          </a>
+        </div>
+
+        <!-- Norkin DL -->
+        <div class="border border-border rounded-lg p-6 bg-bg/60">
+          <div class="flex items-center mb-4">
+            <img src="img/norkindl.jpeg" alt="Ikona Norkin DL" class="w-12 h-12 rounded-full mr-3" loading="lazy" />
+            <h3 class="text-xl font-semibold">Norkin&nbsp;DL</h3>
+          </div>
+          <p class="text-accent text-sm mb-5">
+            Slash <code>/download</code> – MP3, MP4, playlisty.
+          </p>
+          <a href="https://cdn.discordapp.com/attachments/1190025333181784094/1424868002293354658/NorkinDL.zip"
+             target="_blank" rel="noopener" class="btn-invite">
+            Pobierz
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVERS ===== -->
+  <section id="servers" class="max-w-5xl mx-auto px-4 py-20">
+    <h2 class="text-3xl font-bold mb-10">Serwery Discord</h2>
+
+    <div class="flex flex-col gap-8">
+      <div class="srv-card">
+        <div>
+          <h3>OVSL&nbsp;| Support&nbsp;Norkina</h3>
+          <p class="srv-text">Wsparcie, changelogi, sneak-peeki.</p>
+        </div>
+        <a href="https://discord.gg/EXrRK35Pbc" target="_blank" rel="noopener" class="btn-join">
+          Dołącz
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="bg-panel py-20 border-t border-border">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <img src="img/avatar.png" alt="Avatar Nori" class="w-32 h-32 mx-auto rounded-full mb-6" loading="lazy" />
+      <h2 class="text-3xl font-bold mb-4">Kilka słów o mnie</h2>
+      <p class="text-accent leading-7 mb-6">
+        Nazywam się Nori. Tworzę boty, skrypty i proste aplikacje. Uczę się nowych technologii, automatyzuję codzienne
+        zadania i chętnie pomagam społeczności Discorda. She/Her.
+      </p>
+
+      <div class="space-x-5 text-2xl">
+        <a href="https://github.com/nori727" target="_blank" rel="noopener" class="hover:text-white">🐙</a>
+        <a href="https://x.com/norii727"    target="_blank" rel="noopener" class="hover:text-white">🐦</a>
+        <a href="https://discord.com/users/593091778232451075" target="_blank" rel="noopener" class="hover:text-white">✉️</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center text-accent py-8 text-sm border-t border-border bg-bg">
+    © 2025&nbsp;Norkin • Nori
+  </footer>
+
+  <!-- ===== DROBNE KLASY (Tailwind @apply) ===== -->
+  <style>
+    .btn-invite,
+    .btn-join {
+      @apply inline-block bg-primary text-bg font-semibold py-2 px-4 rounded hover:bg-white/90 transition;
+    }
+    .srv-card {
+      @apply border border-border rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between bg-bg/60;
+    }
+    .srv-text { @apply text-accent text-sm; }
+  </style>
+</body>
+</html>
